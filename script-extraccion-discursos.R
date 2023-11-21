@@ -85,18 +85,80 @@ View(nveces_enlace)
 ##Pregunta 1.5. Para cada enlace, seguirlo e indicar si está activo (podemos 
 ##usar el código de status HTTP al hacer una petición a esa URL). 
 
+library(httr)
+
+# Definir la URL que deseas verificar
+url <- "https://www.mediawiki.org/wiki/MediaWiki"
+
+# Enviar una solicitud HEAD a la URL
+response <- HEAD(url)
+# Obtener el código de estado HTTP
+status_code <- response$status_code
+# Imprimir el código de estado HTTP
+print(status_code)
+#Convertir URL relativa a absoluta
+df$url <- ifelse(grepl("^http", df$url), df$url, paste0("https://www.mediawiki.org/wiki/MediaWiki", df$url))
+df$url <- ifelse(grepl("^//", df$url), paste0("https:", df$url), df$url)
+
+# Iteramos sobre cada fila del data frame
+for (i in 1:nrow(df)) {
+  # Obtenemos la URL de la fila actual
+  URL1 <- df[i, "url"]
+  
+  # Verificamos si la URL es relativa o absoluta
+  if (grepl("^http", URL1)) {
+    # Si la URL es absoluta, hacemos una petición HTTP directamente
+    response <- httr::GET(URL1)
+  } else {
+    # Si la URL es relativa, le añadimos el dominio de la página
+    domain <- "https://www.mediawiki.org/wiki/MediaWiki"
+    URL1 <- paste0(domain, URL1)
+    response <- httr::GET(URL1)
+  }
+  
+  # Extraemos el código de estado HTTP de la respuesta
+  status_code <- response$status_code
+  
+  # Guardamos el código de estado HTTP en una nueva columna
+  df[i, "responseCode"] <- status_code
+  
+  # Esperamos unos segundos antes de hacer la siguiente petición
+  Sys.sleep(0.2)
+}
+
+# Verificar si se ha convertido correctamente
+view(df)
+
+##############################################################################
 
 
-
-## Gráficos en R ()
+## Gráficos en R
 
 ##Pregunta 2.1: Elaborar n histograma con la frecuencia de aparición de 
 #los enlaces, pero separado por URLs absolutas (con “http…”) y URLs relativas.
 
+pagina <- "https://www.mediawiki.org/wiki/MediaWiki" 
+html <- rvest::read_html(pagina)
+enlaces <- html %>% html_elements("a")
+df <- data.frame(
+  url = enlaces %>% html_attr("href")
+)
+# Identificar URLs absolutas y relativas
+urls_absolutas <- df[str_detect(df, "^https?://")]
+urls_relativas <- df[str_detect(df, "^https?://")]
+# Crear un data frame para el gráfico de barras
+datos_grafico <- data.frame(
+Tipo = df(rep("Absolutas", length(urls_absolutas)), rep("Relativas", length(urls_relativas))),
+  Frecuencia = df(table(urls_absolutas), table(urls_relativas))
+)
 
-
-
-
+# Crear el histograma
+ggplot(datos_grafico, aes(x = Frecuencia, fill = Tipo)) +
+  geom_bar(stat = "count", position = "dodge") +
+  labs(title = "Histograma de Frecuencia de Enlaces por Tipo",
+       x = "Frecuencia",
+       y = "Número de Enlaces") +
+  theme_minimal()
 
 
 
