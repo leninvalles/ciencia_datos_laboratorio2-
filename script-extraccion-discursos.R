@@ -15,6 +15,12 @@ library(stringr)
 library(readr)
 library(XML)
 library(xml2)
+library(ggplot2)
+library(dplyr)
+library(graphics)
+library(shiny)
+
+
 #########################################################################
 ##Pregunta 1: Programa de tipo web scrapping con el que podemos obtener
 ##una página web, mediante su URL, y analizar su contenido HTML con tal 
@@ -63,11 +69,7 @@ html %>% html_elements("a")
 ##Pregunta 1.4. Analizar el contenido de la web, buscando el título de la 
 ##página (que en HTML se etiqueta como “title”).
 
-#Inclusión de Librerias
-library(XML)
-library(httr)
-library(rvest)
-library(xml2)
+
 #Definir la URL de la página web 
 pagina <- "https://www.mediawiki.org/wiki/MediaWiki"
 #Recuperar el contenido de la solicitud
@@ -116,6 +118,7 @@ for (i in 1:nrow(df)) {
     response <- httr::GET(URL1)
   }
   
+  
   # Extraemos el código de estado HTTP de la respuesta
   status_code <- response$status_code
   
@@ -127,41 +130,56 @@ for (i in 1:nrow(df)) {
 }
 
 # Verificar si se ha convertido correctamente
-view(df)
+View(df)
+print(df)
+
 
 ##############################################################################
 
-
 ## Gráficos en R
 
-##Pregunta 2.1: Elaborar n histograma con la frecuencia de aparición de 
+
+
+##Pregunta 2.1: Elaborar un histograma con la frecuencia de aparición de 
 #los enlaces, pero separado por URLs absolutas (con “http…”) y URLs relativas.
-
-pagina <- "https://www.mediawiki.org/wiki/MediaWiki" 
-html <- rvest::read_html(pagina)
-enlaces <- html %>% html_elements("a")
-df <- data.frame(
-  url = enlaces %>% html_attr("href")
-)
-# Identificar URLs absolutas y relativas
-urls_absolutas <- df[str_detect(df, "^https?://")]
-urls_relativas <- df[str_detect(df, "^https?://")]
-# Crear un data frame para el gráfico de barras
-datos_grafico <- data.frame(
-Tipo = df(rep("Absolutas", length(urls_absolutas)), rep("Relativas", length(urls_relativas))),
-  Frecuencia = df(table(urls_absolutas), table(urls_relativas))
-)
-
-# Crear el histograma
-ggplot(datos_grafico, aes(x = Frecuencia, fill = Tipo)) +
-  geom_bar(stat = "count", position = "dodge") +
-  labs(title = "Histograma de Frecuencia de Enlaces por Tipo",
-       x = "Frecuencia",
-       y = "Número de Enlaces") +
-  theme_minimal()
+# Añadir una columna para indicar si la URL es absoluta
 
 
+df <- df %>% mutate(is_absolute = str_detect(url, "^http(s)?://"))
 
+df_enlaces$is_absolute <- sapply(df_enlaces$enlace, absoluto)
+
+ggplot2::ggplot(data=df_enlaces)+facet_wrap(~absoluto)+ geom_bar(aes(x = Enlace))
+
+
+#Pregunta 2.2: Un gráfico de barras indicando la suma de enlaces que apuntan a otros dominios o servicios (distinto a https://www.mediawiki.org en el caso de
+#ejemplo) vs. la suma de los otros enlaces. Aquí queremos distinguir enlaces que apuntan a mediawiki versus el resto.
+#Sabemos que las URLs relativas ya apuntan dentro, por lo tanto hay que analizar las URLs absolutas y comprobar que apunten a https://www.mediawiki.org.
+#Añadiremos a nuestro data.frame una columna indicando si el enlace es interno o no. Usaremos base, lattice o ggplot para generar este gráfico de barras, donde
+#cada barra indicará la suma de enlaces para cada grupo. El grafico resultado lo uniremos con los anteriores, en una sola imagen.
+
+df_enlaces$mediawiki <- sapply(df_enlaces$Enlace, mediawiki)
+
+ggplot2::ggplot(data=df_enlaces)+ geom_bar(aes(x = mediawiki))
+
+
+#Pregunta 2.3: Un gráfico de tarta (pie chart) indicando los porcentajes de Status de nuestro
+#análisis. Por ejemplo, si hay 6 enlaces con status “200” y 4 enlaces con status “404”, la tarta mostrará un 60% con la etiqueta “200” y 
+#un 40% con la etiqueta “404”. Este gráfico lo uniremos a los anteriores. El objetivo final es obtener una imagen que recopile los gráficos generados.
+#Usad la capacidad de R y ggplot2 para componer gráficos en una sola figura. Si tales gráficos están compuestos directamente desde R 
+#(y no en el documento memoria), se puntuará mejor.
+
+
+df_Enlaces <- data_enlaces %>% count(Estado)
+totalEnlaces <- sum(df_Enlaces$n)
+df_Enlaces$porcentaje <- (df_Enlaces$n / totalEnlaces) * 100
+
+df_Enlaces <- transform(df_Enlaces, Estado = as.character(Estado))
+
+# mostrar grafico de tarta
+ggplot(df_Enlaces, aes(x = "", y = porcentaje, fill = Estado)) + geom_bar(stat = "identity", width = 1) + coord_polar("y", start = 0)
+
+ggplot2::ggplot(data=df_enlaces,aes(x="",y=enlace_activo,fill=enlace_activo))+ geom_bar(width=1,stat = "identity")+ coord_polar("y", start=0)
 
 
 
