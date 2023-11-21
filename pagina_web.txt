@@ -1,0 +1,426 @@
+MediaWiki(function(){var className="client-js vector-feature-language-in-header-disabled vector-feature-language-in-main-page-header-disabled vector-feature-sticky-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-zebra-design-disabled vector-feature-custom-font-size-clientpref-0 vector-feature-client-preferences-disabled vector-feature-typography-survey-disabled vector-toc-not-available";var cookie=document.cookie.match(/(?:^|; )mediawikiwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],
+"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"b6a003a6-1aac-4bf5-83ce-192f3e3f0fea","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"MediaWiki","wgTitle":"MediaWiki","wgCurRevisionId":6167770,"wgRevisionId":6167770,"wgArticleId":1,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Languages pages"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MediaWiki","wgRelevantArticleId":1,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"],"wgIsMainPage":true,"wgNoticeProject":"mediawiki","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr",
+"pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":200,"wgULSCurrentAutonym":"English","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgDiscussionToolsFeaturesEnabled":{"replytool":true,"newtopictool":true,"sourcemodetoolbar":true,"topicsubscription":false,"autotopicsub":false,"visualenhancements":false,"visualenhancements_reply":false,"visualenhancements_pageframe":false},"wgDiscussionToolsFallbackEditMode":"visual","wgULSPosition":"personal","wgULSisCompactLinksEnabled":true,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q5296","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"]};RLSTATE={"skins.vector.user.styles":"ready","ext.gadget.site-styles":"ready","ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":
+"ready","skins.vector.user":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.discussionTools.init.styles":"ready","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","codex-search-styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","mediawiki.ui.button":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.pt":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.page.media","site","mediawiki.page.ready","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.site","ext.gadget.tabbedwindow","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.discussionTools.init","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface"
+,"wikibase.client.vector-2022","ext.checkUser.clientHints"];(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});Jump to content
+
+	
+			
+	
+
+Main menu
+	
+	
+
+
+				
+		
+
+	
+	Main menu
+	move to sidebar
+	hide
+
+
+	
+
+	
+		Navigation
+	
+	
+		
+		Main pageGet MediaWikiGet extensionsTech blogContribute
+		
+
+
+	
+	
+
+	
+		Support
+	
+	
+		
+		User helpFAQTechnical manualSupport deskCommunication
+		
+
+
+
+	
+		Development
+	
+	
+		
+		Developer portalCode statistics
+		
+
+
+
+	
+		mediawiki.org
+	
+	
+		
+		Community portalRecent changesTranslate contentRandom pageVillage pumpSandbox
+		
+
+
+	
+
+	
+		
+	
+	
+		
+		
+
+
+	
+
+
+				
+
+	
+
+
+		
+	
+		
+
+
+		
+		
+			
+
+	
+
+Search
+	
+	
+		
+			
+				
+					
+						
+					
+					
+				Search
+			
+		
+	
+
+
+			
+	
+
+	
+		
+		
+
+English
+
+
+			
+		
+
+
+	
+
+	
+		
+		
+
+
+	
+
+	
+		
+		
+
+
+	
+
+	
+		
+		Create account
+
+Log in
+
+
+			
+		
+
+
+	
+	
+
+	
+
+Personal tools
+	
+	
+
+
+		
+
+	
+		
+		 Create account Log in
+		
+
+
+
+	
+		Pages for logged out editors learn more
+	
+	
+		
+		ContributionsTalk
+		
+
+
+	
+	
+
+
+
+	
+
+	
+		
+			
+		
+		
+			
+		
+			
+				
+				
+		
+	
+
+		
+			MediaWiki is a collaboration and documentation platform brought to you by a vibrant community.
+						
+		
+
+					
+						
+							
+	
+		
+		Main PageDiscussion
+		
+
+
+								
+
+	English
+	
+	
+
+
+					
+
+	
+		
+		
+
+
+				
+	
+
+
+							
+						
+							
+	
+		
+		ReadView sourceView history
+		
+
+
+							
+	Tools
+	
+	
+
+
+									
+						
+
+	
+	Tools
+	move to sidebar
+	hide
+
+
+	
+
+	
+		Actions
+	
+	
+		
+		ReadView sourceView history
+		
+
+
+
+	
+		General
+	
+	
+		
+		What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationCite this pageGet shortened URLWikidata item
+		
+
+
+
+	
+		Print/export
+	
+	
+		
+		Create a bookDownload as PDFPrintable version
+		
+
+
+
+	
+		In other projects
+	
+	
+		
+		Wikimedia CommonsWikimedia FoundationMeta-WikiWikimedia OutreachMultilingual WikisourceWikispeciesWikibooksWikidataWikifunctionsWikimaniaWikinewsWikipediaWikiquoteWikisourceWikiversityWikivoyageWiktionary
+		
+
+
+
+
+									
+				
+	
+
+
+							
+					
+				
+				
+					
+			
+						
+	
+				
+					
+					
+						From mediawiki.org
+					
+					
+					
+					
+					.mw-parser-output .mainpage_row{display:flex;flex-direction:row;flex-flow:row wrap;justify-content:space-between;padding:0;margin:0 -5px 0 -5px}.mw-parser-output .mainpage_box{flex:1;margin:5px;min-width:210px;border:1px solid #CCC;padding:0 10px 10px 10px;box-shadow:0 2px 2px rgba(0,0,0,0.1)}.mw-parser-output .mainpage_box h3{padding-right:0;padding-top:0;padding-bottom:0;margin:0.5em 0}.mw-parser-output .mainpage_box h3:not(.tpl-vheadanchor-heading){padding-left:0}.mw-parser-output .mainpage_box h3 .header_icon{float:left;margin-right:5px}.mw-parser-output .mainpage_box .items{border-top:1px solid #CCC;padding-top:0.5em}.mw-parser-output .mainpage_box p:last-child{margin-bottom:0}.mw-parser-output .mainpage_boxcontents_small{font-size:95%}.mw-parser-output .mw-pt-languages{display:block;background:none;border:1px solid #CCC;box-shadow:0 2px 2px rgba(0,0,0,0.1);width:auto}.mw-parser-output .mw-pt-languages-label{background:none;border-right:none}@media screen and (max-width:719px){.mw-parser-output .thumb{float:none}.mw-parser-output .thumb,.mw-parser-output .thumbinner{margin-left:auto;margin-right:auto}}
+MediaWiki is a collaboration and documentation platform brought to you by a vibrant community.
+Photo of participants of the Wikimedia Hackathon 2023 
+The MediaWiki software is used by tens of thousands of websites and thousands of companies and organisations.
+It powers Wikipedia and also this website.
+MediaWiki helps you collect and organise knowledge and make it available to people.
+It's powerful, multilingual, free and open, extensible, customisable, reliable, and free of charge.
+Find out more and if MediaWiki is right for you.
+
+
+
+	
+		Set up and run MediaWiki
+		
+Download, install and configure MediaWiki
+Add functionality by installing extensions
+Problems? See errors and symptoms and FAQ
+Don't own a server? Find hosting services
+Get professional development and consulting 
+Join MediaWiki Stakeholders user group
+	
+	
+		Edit and use MediaWiki
+		
+Learn how to navigate 
+Learn how to edit a page 
+Learn more about reading, editing, and personal customisation 
+	
+	
+		Develop and extend code
+		
+Read the MediaWiki developer documentation
+Visit the Wikimedia Developer Portal
+	
+
+
+	
+		Get help and contribute
+		
+Cannot find the answer to a problem with MediaWiki? Ask the support desk!
+Get involved as a translator, designer, documentation writer, tester, tech ambassador, or developer
+Report wrong software behaviour or a feature proposal 
+	
+	
+		News
+		
+		
+		
+2023-12-11 to 2023-12-13
+ SMWCon Fall 2023 (hybrid event)
+2023-09-29
+ Maintenance release: MediaWiki 1.35.13
+2023-09-28
+ MediaWiki 1.35.12, 1.39.5 and 1.40.1 security releases are now available.		
+		More news
+
+		
+	
+
+
+
+.mw-parser-output .nmbox{clear:both;background:#f8f9fa;border:1px solid #AAA;box-sizing:border-box;margin:2px 0;padding:0}.mw-parser-output .nmbox *{box-sizing:border-box}.mw-parser-output .nmbox-header{background:#eaecf0;padding:4px 0.5em;font-weight:bold;text-align:center;white-space:nowrap}.mw-parser-output .nmbox .mbox-image{display:inline-block;padding-right:1em}.mw-parser-output .nmbox-text{border-top:1px solid #AAA;width:100%;padding:4px 0.5em}@media screen and (min-width:768px){.mw-parser-output .nmbox-header{display:table-cell;border-right:1px solid #AAA;width:1%}.mw-parser-output .nmbox-text{border-top:none;display:table-cell}}Other languages: 
+
+English  • Afrikaans • العربية • asturianu • беларуская • беларуская (тарашкевіца) • български • বাংলা • bosanski • català • کوردی • čeština • dansk • Deutsch • español • فارسی • suomi • français • galego • ગુજરાતી • עברית • हिन्दी • hrvatski • magyar • հայերեն • Bahasa Indonesia • italiano • 日本語 • Jawa • қазақша • 한국어 • Bahasa Melayu • Mirandés • Nederlands • polski • português • português do Brasil • română • русский • sardu • සිංහල • slovenčina • slovenščina • Soomaaliga • shqip • српски / srpski • svenska • ไทย • Türkçe • українська • Tiếng Việt • 粵語 • 中文
+
+
+
+
+
+
+
+Retrieved from "https://www.mediawiki.org/w/index.php?title=MediaWiki&oldid=6167770"
+					Hidden category: Languages pages
+				
+			
+		
+			
+ This page was last edited on 24 October 2023, at 17:20.
+	Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.
+See Terms of Use for details.
+Privacy policy
+	About mediawiki.org
+	Disclaimers
+	Code of Conduct
+	Developers
+	Statistics
+	Cookie statement
+	Mobile view
+
+	
+
+	 
+ 
+
+	
+		
+		
+
+Toggle limited content width
+
+
+	
+(RLQ=window.RLQ||[]).push(function(){mw.log.warn("This page is using the deprecated ResourceLoader module \"mediawiki.ui.button\".\n[1.41] Please use Codex. See migration guidelines: https://w.wiki/7TAh");mw.config.set({"wgHostname":"mw-web.eqiad.main-748f894b66-xbgx7","wgBackendResponseTime":123,"wgDiscussionToolsPageThreads":[{"headingLevel":2,"name":"h-","type":"heading","level":0,"id":"h-MediaWiki_is_a_collaboration_and_documentation_platform_brought_to_you_by_a_vibr","replies":[{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Set_up_and_run_MediaWiki-MediaWiki_is_a_collaboration_and_documentation_platform_brought_to_you_by_a_vibr","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Edit_and_use_MediaWiki-MediaWiki_is_a_collaboration_and_documentation_platform_brought_to_you_by_a_vibr","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Develop_and_extend_code-MediaWiki_is_a_collaboration_and_documentation_platform_brought_to_you_by_a_vibr","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-Get_help_and_contribute-MediaWiki_is_a_collaboration_and_documentation_platform_brought_to_you_by_a_vibr","replies":[]},{"headingLevel":3,"name":"h-","type":"heading","level":0,"id":"h-News-MediaWiki_is_a_collaboration_and_documentation_platform_brought_to_you_by_a_vibr","replies":[]}],"uneditableSection":true}],"wgPageParseReport":{"discussiontools":{"limitreport-timeusage":"0.012"},"limitreport":{"cputime":"0.185","walltime":"0.285","ppvisitednodes":{"value":4496,"limit":1000000},"postexpandincludesize":{"value":127033,"limit":2097152},"templateargumentsize":{"value":28208,"limit":2097152},"expansiondepth":{"value":28,"limit":100},"expensivefunctioncount":{"value":85,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1975,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  209.669      1 -total","100.00%  209.669      1 Template:Main_page"," 53.46%  112.081      1 Template:Languages"," 41.76%   87.565      1 Template:Nmbox"," 37.42%   78.465    155 Template:Languages/Lang"," 21.28%   44.608      7 Template:Ll","  9.20%   19.293     15 Template:Translatable","  6.75%   14.145      1 Template:MediaWiki_News/en","  5.81%   12.186      8 Template:Pagelang","  4.04%    8.474      1 Template:Languages/Title"]},"scribunto":{"limitreport-timeusage":{"value":"0.051","limit":"10.000"},"limitreport-memusage":{"value":1592523,"limit":52428800}},"cachereport":{"origin":"mw-web.eqiad.canary-d55f867c7-gx9mw","timestamp":"20231121133658","ttl":1814400,"transientcontent":false}}});});{"@context":"https:\/\/schema.org","@type":"Article","name":"MediaWiki","url":"https:\/\/www.mediawiki.org\/wiki\/MediaWiki","sameAs":"http:\/\/www.wikidata.org\/entity\/Q5296","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q5296","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-08-06T20:32:02Z","dateModified":"2023-10-24T17:20:57Z","headline":"Wikimedia project page"}
