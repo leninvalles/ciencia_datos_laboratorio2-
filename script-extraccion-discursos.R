@@ -88,7 +88,7 @@ View(nveces_enlace)
 
 
 
-## Gráficos en R
+## Gráficos en R ()
 
 ##Pregunta 2.1: Elaborar n histograma con la frecuencia de aparición de 
 #los enlaces, pero separado por URLs absolutas (con “http…”) y URLs relativas.
