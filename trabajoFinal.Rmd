@@ -1,3 +1,11 @@
+---
+title: "Trabajo Final"
+author: "Valles Custodio Fuerte"
+date: "2023-11-21"
+output: html_document
+---
+
+```{r, message=FALSE, results='hold'}
 ##########################################################################
 #                                                                        #
 #                                                                        #
@@ -180,8 +188,5 @@ df_Enlaces <- transform(df_Enlaces, Estado = as.character(Estado))
 ggplot(df_Enlaces, aes(x = "", y = porcentaje, fill = Estado)) + geom_bar(stat = "identity", width = 1) + coord_polar("y", start = 0)
 
 ggplot2::ggplot(data=df_enlaces,aes(x="",y=enlace_activo,fill=enlace_activo))+ geom_bar(width=1,stat = "identity")+ coord_polar("y", start=0)
-
-
-
-
+```
 
